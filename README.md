@@ -22,8 +22,3 @@
 ## Права
 - `glowmaintenance.admin` — доступ к командам управления (по умолчанию: `op`).
 - `glowmaintenance.bypass` — право входа на сервер во время тех. работ (настраивается в `config.yml`, по умолчанию: `op`).
-
-## Сборка
-```bash
-mvn clean package
-```
