@@ -1,6 +1,7 @@
 package pluginsfix.glowmaintenance.text;
 
 import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.TextDecoration;
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import net.kyori.adventure.title.Title;
 import org.bukkit.Bukkit;
@@ -130,7 +131,23 @@ public final class Messages {
         }
         matcher.appendTail(sb);
 
-        return SERIALIZER.deserialize(sb.toString());
+        Component deserialized = SERIALIZER.deserialize(sb.toString());
+        return disableItalic(deserialized);
+    }
+
+    public static Component disableItalic(Component component) {
+        if (component == null) {
+            return Component.empty();
+        }
+        Component current = component.decoration(TextDecoration.ITALIC, TextDecoration.State.FALSE);
+        if (current.children().isEmpty()) {
+            return current;
+        }
+        List<Component> newChildren = new ArrayList<>(current.children().size());
+        for (Component child : current.children()) {
+            newChildren.add(disableItalic(child));
+        }
+        return current.children(newChildren);
     }
 
     private void executeLine(CommandSender sender, String line, Map<String, String> placeholders) {
@@ -198,7 +215,8 @@ public final class Messages {
             float volume = parts.length > 1 ? Float.parseFloat(parts[1]) : 1.0f;
             float pitch = parts.length > 2 ? Float.parseFloat(parts[2]) : 1.0f;
             player.playSound(player.getLocation(), sound, volume, pitch);
-        } catch (IllegalArgumentException ignored) {
+        } catch (IllegalArgumentException e) {
+            logger.warning("Failed to play sound: " + payload + " (" + e.getMessage() + ")");
         }
     }
 
