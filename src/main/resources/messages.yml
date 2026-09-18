@@ -1,0 +1,55 @@
+no-permission:
+  - "[message] &#FB8808▶ &fНедостаточно &#FB8808прав на использование &fданной команды!"
+  - "[sound] BLOCK_ANVIL_LAND"
+
+usage:
+  - "[message] "
+  - "[message] &#FFFF00▶ &fИспользование команд управления:"
+  - "[message] "
+  - "[message]   &#FFFF00◆ &f/maintenance on &f— включить режим тех. работ"
+  - "[message]   &#FFFF00◆ &f/maintenance off &f— выключить режим тех. работ"
+  - "[message]   &#FFFF00◆ &f/maintenance toggle &f— переключить статус"
+  - "[message]   &#FFFF00◆ &f/maintenance status &f— текущий статус сервера"
+  - "[message]   &#FFFF00◆ &f/maintenance reload &f— перезагрузить конфигурацию"
+  - "[message] "
+
+enabled-success:
+  - "[message] &#FFFF00◆ &fРежим технических работ успешно &#FFFF00включён&f!"
+  - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP"
+
+disabled-success:
+  - "[message] &#FFFF00◆ &fРежим технических работ успешно &#FFFF00выключен&f!"
+  - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP"
+
+already-enabled:
+  - "[message] &#FB8808▶ &fРежим технических работ &#FB8808уже включён&f!"
+  - "[sound] BLOCK_ANVIL_LAND"
+
+already-disabled:
+  - "[message] &#FB8808▶ &fРежим технических работ &#FB8808уже выключен&f!"
+  - "[sound] BLOCK_ANVIL_LAND"
+
+status-enabled:
+  - "[message] &#FFFF00◆ &fТекущий статус тех. работ: &#FFFF00ВКЛЮЧЕНЫ &f(доступ закрыт)"
+
+status-disabled:
+  - "[message] &#FFFF00◆ &fТекущий статус тех. работ: &#FB8808ВЫКЛЮЧЕНЫ &f(сервер открыт)"
+
+reloaded:
+  - "[message] &#FFFF00◆ &fКонфигурация плагина &#FFFF00GlowMaintenance &fуспешно перезагружена!"
+  - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP"
+
+broadcast-enabled:
+  - "[broadcast] &#FB8808▶ &fВнимание! На сервере включен &#FB8808режим технических работ&f."
+
+broadcast-disabled:
+  - "[broadcast] &#FFFF00▶ &fТехнические работы &#FFFF00завершены&f! Сервер доступен для входа."
+  - "[sound] ENTITY_PLAYER_LEVELUP"
+
+kick-screen:
+  - "&#FB8808▶ &#FFFF00ВЕДУТСЯ ТЕХНИЧЕСКИЕ РАБОТЫ &#FB8808◀"
+  - ""
+  - "&fСервер временно недоступен в связи с техническими работами."
+  - "&fПожалуйста, попробуйте подключиться позже."
+  - ""
+  - "&#FFFF00◆ &fСледите за новостями нашего проекта!"

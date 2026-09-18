@@ -1,0 +1,20 @@
+name: GlowMaintenance
+version: '${project.version}'
+main: pluginsfix.glowmaintenance.GlowMaintenance
+api-version: '1.21'
+author: pluginsfix
+description: Maintenance mode system with auto-whitelist, custom kick screen, and dynamic MOTD
+commands:
+  maintenance:
+    description: Control server maintenance mode
+    permission: glowmaintenance.admin
+    aliases:
+      - gm
+      - glowmaintenance
+permissions:
+  glowmaintenance.admin:
+    description: Allows managing maintenance mode
+    default: op
+  glowmaintenance.bypass:
+    description: Allows joining the server during maintenance mode
+    default: op

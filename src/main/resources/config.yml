@@ -1,0 +1,11 @@
+config-version: 1
+
+maintenance:
+  enabled: false
+  auto-whitelist: true
+  kick-online-players: true
+  bypass-permission: "glowmaintenance.bypass"
+  motd:
+    enabled: true
+    line-1: "&#FB8808▶ &#FFFF00ВЕДУТСЯ ТЕХНИЧЕСКИЕ РАБОТЫ &#FB8808◀"
+    line-2: "&fСервер временно недоступен. Загляните позже!"
